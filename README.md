@@ -44,7 +44,7 @@ http://nip-limnis.eyv.sch.gr/autosch/joomla15/index.php/kainotoma-programmata/ae
 Το κύριο θέμα όλων των έργων του είναι «η συμφιλίωση και η αρμονία της ανθρωπότητας με τη φύση». 
 (https://drive.google.com/file/d/1uXRBEvd-jX5pP9wJW_9slvyEWiSKuuRx/view)
 
-Από το σημείο εκκίνησης του ρομπότ Thymio (κυκλικός κόμβος) ξεκινούν 3 δρόμοι διαφορετικής κατεύθυνσης που οδηγούν σε 6 «σταθμούς»(https://youtu.be/yJMWsIPb-Po): 
+Από το σημείο εκκίνησης του ρομπότ Thymio (κυκλικός κόμβος) ξεκινούν 3 δρόμοι διαφορετικής κατεύθυνσης που οδηγούν σε 6 «σταθμούς» (https://youtu.be/yJMWsIPb-Po): 
 1.	Σχολείο
 2.	Κήπος με κομποστοποιητή
 3.	Σπίτι
