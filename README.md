@@ -73,10 +73,15 @@ http://nip-limnis.eyv.sch.gr/autosch/joomla15/index.php/kainotoma-programmata/ae
  Εκεί, υλοποιεί την αποστολή και μετά σκανάρει την πινακίδα με το QR code, που είναι τοποθετημένη στο σταθμό, για να δει αν έχει κάνει σωστές επιλογές. (https://drive.google.cκκκom/file/d/1luxnz7PTftpXY6P4SPBHCtOJF_4E1vHp/view?usp=sharing)
  
 Νικήτρια είναι η ομάδα που έχει κάνει τις περισσότερες σωστές ενέργειες.
+
 https://youtu.be/TF_8IKXtI2c
+
 https://youtu.be/oUFRDKPowGo
+
 https://youtu.be/7Oq5Oiacdr8
+
 https://youtu.be/fFloT2l_z7Q
+
 https://youtu.be/iLdL56rLXP8
 
 # Ηλεκτρονικές συσκευές
