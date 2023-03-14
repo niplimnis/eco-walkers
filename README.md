@@ -36,7 +36,7 @@ http://nip-limnis.eyv.sch.gr/autosch/joomla15/index.php/pagkosmies-imeres/pagkos
 
 http://nip-limnis.eyv.sch.gr/autosch/joomla15/index.php/kainotoma-programmata/aeiforo-sxoleio/642-to-timomeno-prosopo
 
-# Περιγραφή Παιχνιδιού
+# Περιγραφή του παιχνιδιού
 Τα παιδιά έφτιαξαν τη μακέτα μιας πόλης που ονειρεύονται και θα τους άρεσε να ζουν.
 Τα κτίρια της πόλης τα κατασκεύασαν στο σπίτι μαζί με τους γονείς τους, από ανακυκλώσιμα υλικά και ήταν εμπνευσμένα από τον καλλιτέχνη ζωγράφο και αρχιτέκτονα Hundertwasser, διάσημο για τις προσπάθειές του στον τομέα της προστασίας του περιβάλλοντος.
 
