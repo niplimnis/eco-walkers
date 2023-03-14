@@ -31,6 +31,7 @@ http://nip-limnis.eyv.sch.gr/autosch/joomla15/index.php/kainotoma-programmata/pe
 ( https://youtu.be/YZ9yx9aqj7I)
 
 •	Είχαν προηγηθεί δραστηριότητες σχετικές με τη χρήση και λειτουργία των κωδικών QR. Στην ιστοσελίδα του σχολείου μας μπορείτε να δείτε αναλυτικά τις δραστηριότητες που υλοποιήσαμε.
+
 http://nip-limnis.eyv.sch.gr/autosch/joomla15/index.php/pagkosmies-imeres/pagkosmia-imera-diatrofis/644-oi-thisavroi-tis-ygieinis-diatrofis
 
 http://nip-limnis.eyv.sch.gr/autosch/joomla15/index.php/kainotoma-programmata/aeiforo-sxoleio/642-to-timomeno-prosopo
@@ -49,6 +50,7 @@ http://nip-limnis.eyv.sch.gr/autosch/joomla15/index.php/kainotoma-programmata/ae
 6.	Super Market
 
 (https://youtu.be/yJMWsIPb-Po)
+
 Έχουμε φτιάξει 12 κάρτες με QR codes. Oι 6 περιέχουν βίντεο/αποστολές με τη μασκότ της τάξης μας (ένα φύλλο) τον «Φυλλαράκη» ο οποίος αναθέτει στα παιδιά μια αποστολή για τον κάθε «σταθμό». 
 Οι άλλες 6 έχουν τοποθετηθεί στους σταθμούς (μία στον καθένα) και δείχνουν τη «σωστή» συμπεριφορά/ λύση.
 
