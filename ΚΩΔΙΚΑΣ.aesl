@@ -1,7 +1,7 @@
 <!DOCTYPE aesl-source>
 <network>
-<event name="pair_run" size="1"/>
-<event name="debug_log" size="14"/>
+<event size="1" name="pair_run"/>
+<event size="14" name="debug_log"/>
 <node nodeId="{53084a5a-1291-4a0e-9146-005fb2bc9857}" name="�������� ������� USB"># variables for notes
 var notes[6]
 var durations[6]
@@ -35,49 +35,65 @@ onevent sound.finished
 
 onevent buttons
 	when button.forward == 1 do
-		motor.left.target = 50
-		motor.right.target = 50
+		motor.left.target = 300
+		motor.right.target = 300
 		call leds.top(0,32,0)
-		call leds.bottom.left(22,2,22)
-		call leds.bottom.right(22,2,22)
-		call math.copy(notes[0:5], [440, 524, 440, 370, 262, 370])
-		call math.copy(durations[0:5], [7, 7, 14, 14, 7, 14])
+		call leds.bottom.left(0,32,0)
+		call leds.bottom.right(0,32,0)
+		call math.copy(notes[0:5], [440, 524, 440, 370, 311, 370])
+		call math.copy(durations[0:5], [7, 7, 14, 7, 7, 14])
 		note_index = 1
 		note_count = 6
 		call sound.freq(notes[0], durations[0])
 		emit pair_run 0
-		_emit debug_log [0, 0x5, 0xa981, 0xb0, 0, 0x10, 0xb0b, 0x420, 0x5dee, 0x7232, 0x191]
 	end
 
 	when button.center == 1 do
 		motor.left.target = 0
 		motor.right.target = 0
 		call leds.top(32,0,0)
-		call leds.bottom.left(32,5,16)
-		call leds.bottom.right(32,5,16)
-		call math.copy(notes[0:4], [440, 524, 440, 370, 311])
-		call math.copy(durations[0:4], [14, 7, 14, 14, 7])
+		call leds.bottom.left(32,0,0)
+		call leds.bottom.right(32,0,0)
+		call math.copy(notes[0:4], [311, 262, 0, 440, 524])
+		call math.copy(durations[0:4], [7, 7, 14, 7, 7])
 		note_index = 1
 		note_count = 5
 		call sound.freq(notes[0], durations[0])
-		emit pair_run 3
-		_emit debug_log [0x3, 0x5, 0xa981, 0xb0, 0, 0x1, 0xa0a, 0x8820, 0x88d5, 0x723b, 0x284]
+		emit pair_run 5
 	end
 
 
 onevent prox
+	when prox.ground.delta[0] &lt;= 400 and prox.ground.delta[1] &lt;= 400 do
+		motor.left.target = 100
+		motor.right.target = 100
+		emit pair_run 1
+	end
+
 	when prox.ground.delta[0] >= 450 and prox.ground.delta[1] &lt;= 400 do
 		motor.left.target = 300
 		motor.right.target = 0
-		emit pair_run 1
-		_emit debug_log [0x1, 0x2, 0x83, 0x6, 0x190, 0x1c2, 0x100a]
+		emit pair_run 2
 	end
 
 	when prox.ground.delta[0] &lt;= 400 and prox.ground.delta[1] >= 450 do
 		motor.left.target = 0
 		motor.right.target = 300
-		emit pair_run 2
-		_emit debug_log [0x2, 0x2, 0x83, 0x9, 0x190, 0x1c2, 0xa10]
+		emit pair_run 3
+	end
+
+	when prox.horizontal[2] >= 2000 do
+		motor.left.target = 0
+		motor.right.target = 0
+		call leds.bottom.left(32,0,0)
+		call leds.bottom.right(32,0,0)
+		call leds.top(32,0,0)
+		call math.copy(notes[0:5], [440, 524, 440, 370, 311, 370])
+		call math.copy(durations[0:5], [7, 7, 14, 7, 7, 14])
+		note_index = 1
+		note_count = 6
+		call sound.freq(notes[0], durations[0])
+		emit pair_run 4
 	end
 
 <toolsPlugins>
@@ -85,26 +101,37 @@ onevent prox
 <vplroot xml-format-version="1">
 <program advanced_mode="0">
 <set>
-<block type="event" value1="0" value5="0" value4="0" value6="0" name="button" value3="0" value2="0" value0="1"/>
-<block type="action" value1="50" name="move" value0="50"/>
-<block type="action" value1="32" name="colortop" value2="0" value0="0"/>
-<block type="action" value1="2" name="colorbottom" value2="22" value0="22"/>
-<block type="action" value1="260" value5="514" value4="256" name="sound" value3="514" value2="515" value0="259"/>
+<block value1="0" value2="0" value4="0" type="event" name="button" value3="0" value5="0" value0="1" value6="0"/>
+<block value1="300" type="action" name="move" value0="300"/>
+<block value1="32" value2="0" type="action" name="colortop" value0="0"/>
+<block value1="32" value2="0" type="action" name="colorbottom" value0="0"/>
+<block value1="260" value2="515" value4="257" type="action" name="sound" value3="258" value5="514" value0="259"/>
 </set>
 <set>
-<block type="event" value1="2" name="proxground" value3="450" value2="400" value0="1"/>
-<block type="action" value1="0" name="move" value0="300"/>
+<block value1="2" value2="400" type="event" name="proxground" value3="450" value0="2"/>
+<block value1="100" type="action" name="move" value0="100"/>
 </set>
 <set>
-<block type="event" value1="1" name="proxground" value3="450" value2="400" value0="2"/>
-<block type="action" value1="300" name="move" value0="0"/>
+<block value1="2" value2="400" type="event" name="proxground" value3="450" value0="1"/>
+<block value1="0" type="action" name="move" value0="300"/>
 </set>
 <set>
-<block type="event" value1="0" value5="0" value4="1" value6="0" name="button" value3="0" value2="0" value0="0"/>
-<block type="action" value1="0" name="move" value0="0"/>
-<block type="action" value1="0" name="colortop" value2="0" value0="32"/>
-<block type="action" value1="5" name="colorbottom" value2="16" value0="32"/>
-<block type="action" value1="260" value5="517" value4="257" name="sound" value3="514" value2="515" value0="515"/>
+<block value1="1" value2="400" type="event" name="proxground" value3="450" value0="2"/>
+<block value1="300" type="action" name="move" value0="0"/>
+</set>
+<set>
+<block value1="0" value2="1" value4="0" value7="1000" type="event" name="prox" value3="0" value5="0" value8="2000" value0="0" value6="0"/>
+<block value1="0" type="action" name="move" value0="0"/>
+<block value1="0" value2="0" type="action" name="colorbottom" value0="32"/>
+<block value1="0" value2="0" type="action" name="colortop" value0="32"/>
+<block value1="260" value2="515" value4="257" type="action" name="sound" value3="258" value5="514" value0="259"/>
+</set>
+<set>
+<block value1="0" value2="0" value4="1" type="event" name="button" value3="0" value5="0" value0="0" value6="0"/>
+<block value1="0" type="action" name="move" value0="0"/>
+<block value1="0" value2="0" type="action" name="colortop" value0="32"/>
+<block value1="0" value2="0" type="action" name="colorbottom" value0="32"/>
+<block value1="256" value2="517" value4="260" type="action" name="sound" value3="259" value5="517" value0="257"/>
 </set>
 <set/>
 </program>
